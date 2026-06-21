@@ -11,10 +11,9 @@
       "config": { "maxLambdaSize": "15mb" }
     }
   ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "backend/backend/wsgi.py" },
-    { "src": "/admin/(.*)", "dest": "backend/backend/wsgi.py" },
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/backend/backend/wsgi.py" },
+    { "source": "/admin/(.*)", "destination": "/backend/backend/wsgi.py" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
