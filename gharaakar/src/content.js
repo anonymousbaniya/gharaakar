@@ -3,7 +3,7 @@ export const content = {
     brand: "घर आकार",
     tagline: "इन्टेरियर एन्ड निर्माण",
     tag: "पोखराको एक साँचो कथा",
-    headline: "नयाँ घर बनाउँदा १२ लाखको गल्ति — जुन धेरैले गर्छन्",
+    headline: "नयाँ घर बनाउँदा १२ लाखको गल्ति — जुन पोखराका धेरै घरधनीले गर्छन्",
     author: "सागर अधिकारी",
     authorTitle: "सिभिल इन्जिनियर र घर आकारका संस्थापक",
     storyIntro:
@@ -50,7 +50,7 @@ export const content = {
     tagline: "Interior & Construction",
     tag: "A True Story from Pokhara",
     headline:
-      "The 1.2 Million Rupee Mistake People Make When Building a New Home",
+      "The 1.2 Million Rupee Mistake Landlord's in Pokhara Make When Building a New Home",
     author: "Sagar Adhikari",
     authorTitle: "Civil Engineer & Founder of Ghar Aakar",
     storyIntro:
