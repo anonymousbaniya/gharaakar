@@ -14,6 +14,7 @@
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/backend/backend/wsgi.py" },
     { "source": "/admin/(.*)", "destination": "/backend/backend/wsgi.py" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/assets/(.*)", "destination": "/gharaakar/assets/$1" },
+    { "source": "/(.*)", "destination": "/gharaakar/index.html" }
   ]
 }
