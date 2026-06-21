@@ -617,7 +617,12 @@ export default function App() {
         </div>
 
         {/* ════ FOOTER ════ */}
-        <div className="footer">{t.contactInfo}</div>
+        <div className="footer">
+          <div>{t.contactInfo}</div>
+          <div style={{ marginTop: "8px", opacity: 0.8, fontSize: "0.9em" }}>
+            &copy; {new Date().getFullYear()} {t.brand}. All rights reserved.
+          </div>
+        </div>
       </main>
 
       {/* ════ MODAL ════ */}
