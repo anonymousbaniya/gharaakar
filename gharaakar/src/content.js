@@ -78,7 +78,7 @@ export const content = {
       "In the Last 3 Months: Ghar Aakar has applied this method to 9 new home construction projects.",
     ctaHeading: "For Your New Home",
     ctaSubheading: "Book a Free Consultation",
-    btnText: "Book Your Home Evaluation Now",
+    btnText: "Book a Free Consultation",
     bullet1: "✓ Free 30-Minute Consultation",
     bullet2: "✓ Vastu Alignment & Plan Analysis",
     bullet3: "✓ Crystal Clear Fixed Budget Estimates",
