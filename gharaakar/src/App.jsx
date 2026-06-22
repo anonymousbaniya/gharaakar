@@ -528,13 +528,20 @@ export default function App() {
         {/* ════ BOTTOM BAR: Principles + Stats + CTA ════ */}
         <div className="bottom-bar">
 
+          {/* Topic Heading spanning the 3 principle columns */}
+          <div className="bottom-bar-heading">
+            <h2>
+              {t.principlesTitle}
+            </h2>
+          </div>
+
           {/* 3 principles */}
           {principles.map((p, i) => {
             const Icon = principleIcons[i];
             const accent = principleAccents[i];
             const iconColor = principleIconColors[i];
             return (
-              <div key={i} className="principle-cell">
+              <div key={i} className={`principle-cell cell-${i}`}>
                 {/* Icon badge row */}
                 <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "14px" }}>
                   <div style={{
@@ -581,8 +588,8 @@ export default function App() {
             );
           })}
 
-          {/* Vertical divider (hidden on mobile via grid-column count) */}
-          <div style={{ background: "var(--card-border)", transition: "background 0.3s" }} />
+          {/* Vertical divider */}
+          <div className="vdivider" />
 
           {/* Stats Section */}
           <div className="stats-cta-cell">

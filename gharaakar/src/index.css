@@ -308,33 +308,63 @@ body {
   min-width: 0;
 }
 
-/* ── DESKTOP: BOTTOM BAR ── */
+/* ── BASE BOTTOM BAR (MOBILE FIRST) ── */
 .bottom-bar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1.5px minmax(260px, 1.3fr);
+  grid-template-columns: 1fr;
   border-bottom: 1.5px solid var(--card-border);
-  border-top: 1.5px solid var(--card-border);
   flex-shrink: 0;
-  min-height: 200px;
   transition: border-color 0.3s;
 }
 
+.bottom-bar-heading {
+  padding: 24px 16px 8px;
+}
+
+.bottom-bar-heading h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(16px, 1.4vw, 22px);
+  font-weight: 800;
+  color: var(--text-head);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  transition: color 0.3s;
+  position: relative;
+  padding-left: 12px;
+}
+
+.bottom-bar-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12%;
+  bottom: 12%;
+  width: 3.5px;
+  background: var(--orange);
+  border-radius: 99px;
+}
+
 .principle-cell {
-  padding: clamp(18px, 2.2vh, 30px) clamp(16px, 1.8vw, 28px);
-  border-right: 1.5px solid var(--card-border);
+  border-bottom: 1.5px solid var(--card-border);
+  padding: 20px 16px;
   display: flex;
   flex-direction: column;
   gap: 0;
   transition: border-color 0.3s;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.vdivider {
+  display: none;
 }
 
 .stats-cta-cell {
-  padding: clamp(16px, 2vh, 24px) clamp(16px, 2vw, 24px);
-  display: flex;
   flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  padding: 18px 16px;
+  display: flex;
   justify-content: center;
-  gap: 12px;
 }
 
 .stats-list {
@@ -395,7 +425,9 @@ body {
   margin-top: 2px;
 }
 
-/* ── MOBILE: override to single-column scrolling ── */
+/* ── RESPONSIVE MEDIA QUERIES ── */
+
+/* MOBILE ONLY: override top sections */
 @media (max-width: 899px) {
   .app-root {
     height: auto;
@@ -425,34 +457,56 @@ body {
     border-bottom: 1.5px solid var(--card-border);
   }
 
-  .bottom-bar {
-    grid-template-columns: 1fr;
-    border-top: none;
-  }
-
-  .principle-cell {
-    border-right: none;
-    border-bottom: 1.5px solid var(--card-border);
-    padding: 20px 18px;
-    justify-content: flex-start;
-  }
-
-  /* Stats cell: hide the inline CTA button — we use the sticky bar instead */
-  .stats-cta-cell {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    padding: 18px 16px;
-    border-top: 1.5px solid var(--card-border);
-  }
-
   .stats-cta-cell .cta-btn {
     display: none;
   }
+}
 
-  .stats-list {
-    flex-direction: column;
-    gap: 10px;
+/* DESKTOP overrides for bottom bar */
+@media (min-width: 900px) {
+  .app-root {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .bottom-bar {
+    grid-template-columns: 1fr 1fr 1fr 1.5px minmax(260px, 1.3fr);
+    border-bottom: 1.5px solid var(--card-border);
+    border-top: 1.5px solid var(--card-border);
+    min-height: 200px;
+  }
+
+  .bottom-bar-heading {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    padding: clamp(14px, 1.8vh, 20px) clamp(16px, 1.8vw, 28px) 0;
+  }
+
+  .principle-cell {
+    padding: clamp(18px, 2.2vh, 30px) clamp(16px, 1.8vw, 28px);
+    border-right: 1.5px solid var(--card-border);
+    border-bottom: none;
+    grid-row: 2;
+    padding-top: clamp(10px, 1.2vh, 16px);
+    justify-content: center;
+  }
+
+  .principle-cell.cell-0 { grid-column: 1; }
+  .principle-cell.cell-1 { grid-column: 2; }
+  .principle-cell.cell-2 { grid-column: 3; }
+
+  .vdivider {
+    display: block;
+    background: var(--card-border);
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+
+  .stats-cta-cell {
+    padding: clamp(16px, 2vh, 24px) clamp(16px, 2vw, 24px);
+    grid-column: 5;
+    grid-row: 1 / span 2;
+    align-items: stretch;
   }
 }
 
