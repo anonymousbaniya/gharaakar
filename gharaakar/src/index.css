@@ -101,9 +101,9 @@ body {
   box-shadow: 0 2px 8px rgba(232,101,26,0.3);
 }
 
-/* ── BRAND TAGLINE: hidden on small screens ── */
+/* ── BRAND TAGLINE ── */
 .brand-tagline {
-  font-size: clamp(8px, 1.2vw, 10px);
+  font-size: clamp(9px, 1.2vw, 11px);
   font-weight: 700;
   color: var(--text-muted);
   letter-spacing: 0.14em;
@@ -111,10 +111,6 @@ body {
   margin-top: 3px;
   transition: color 0.3s;
   white-space: nowrap;
-}
-
-@media (max-width: 500px) {
-  .brand-tagline { display: none; }
 }
 
 /* ── LANG TOGGLE ── */
