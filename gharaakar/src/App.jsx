@@ -303,7 +303,7 @@ function Modal({ t, open, close }) {
 
 /* ══════════ MAIN APP ══════════ */
 export default function App() {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("np");
   const [modal, setModal] = useState(false);
   const [dark, toggleTheme] = useTheme();
   const t = content[lang];
@@ -501,14 +501,14 @@ export default function App() {
               pointerEvents: "none",
             }} />
             <img
-              src="/gharaakar-house.jpg"
-              alt="Ghar Aakar project — Pokhara, Nepal"
+              src="/gharaakar-before-after.jpg"
+              alt="Ghar Aakar project — Before and After, Pokhara, Nepal"
               style={{
                 width: "100%", height: "100%",
-                objectFit: "cover", objectPosition: "center 70%",
+                objectFit: "cover", objectPosition: "center center",
                 filter: dark
-                  ? "brightness(0.7) saturate(0.75) sepia(0.1)"
-                  : "brightness(1.0) saturate(0.9) sepia(0.12) contrast(1.05)",
+                  ? "brightness(0.75) saturate(0.8) sepia(0.08)"
+                  : "brightness(1.0) saturate(1.0) contrast(1.02)",
                 transition: "filter 0.3s",
               }}
             />
@@ -520,7 +520,7 @@ export default function App() {
               letterSpacing: "0.12em", textTransform: "uppercase",
               padding: "5px 10px", borderRadius: "6px",
             }}>
-              {en ? "Our Work · Pokhara Bagar" : "हाम्रो काम · पोखरा बगर "}
+              {en ? "Before & After · Pokhara" : "अघि र पछि · पोखरा"}
             </div>
           </div>
         </div>
