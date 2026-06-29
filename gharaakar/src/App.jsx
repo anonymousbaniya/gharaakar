@@ -501,8 +501,8 @@ export default function App() {
               pointerEvents: "none",
             }} />
             <img
-              src="/gharaakar-before-after.jpg"
-              alt="Ghar Aakar project — Before and After, Pokhara, Nepal"
+              src="/gharaakar-house.jpg"
+              alt="Ghar Aakar — House project, Pokhara, Nepal"
               style={{
                 width: "100%", height: "100%",
                 objectFit: "cover", objectPosition: "center center",
@@ -520,7 +520,7 @@ export default function App() {
               letterSpacing: "0.12em", textTransform: "uppercase",
               padding: "5px 10px", borderRadius: "6px",
             }}>
-              {en ? "Before & After · Pokhara" : "अघि र पछि · पोखरा"}
+              {en ? "Pokhara, Nepal" : "पोखरा, नेपाल"}
             </div>
           </div>
         </div>
